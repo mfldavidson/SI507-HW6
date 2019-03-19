@@ -84,13 +84,24 @@ Some JavaScript code
 ```
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
+
 You put `//` before a comment
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
 
+A function or functions need to be defined, and then called as part of the HTML.
+
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
 
+`document.querySelector('').innerHTML` allows the user to add HTML while writing in JavaScript, which can include simply printing text -- this is good for fairly static items
+
+`document.getElementsByTagName('tagname').length` displays a list of all elements with the defined tag -- this is good for displaying lists of items that could be dynamically changing
+
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
+
+Line 12, `alert("hello");`
+
+Code added to create new alert on line 13, this code is: `alert(new Date())` which I got from line 20 (line 19 before I added the new line)
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
 
