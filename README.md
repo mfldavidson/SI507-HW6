@@ -105,17 +105,29 @@ Code added to create new alert on line 13, this code is: `alert(new Date())` whi
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
 
+I replaced the string "A name" on line 17 with "Maggie"
+
 * **What does the word `document` represent in this code? Explain briefly.**
+
+`document` refers to the jsPracticeLab.html document that is being displayed on the page. Just like a .doc or .txt file, a .html file is a document.
 
 * **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
 
+Counting all items tagged "li" and storing it in what is essentially an  "items" variable to be called later on line 59.
+
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
+
+White because no other color is specified for the background.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 
+The style that is "called" for the boxes is defined in lines 45-53 so that if the tag `<p>` is used, it will make everything match the defined style until `</p>` is used. You could change the colors defined on lines 47-48 to other Hex colors.
+
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+
+I looked at how it was being done with the University of Michigan Go Blue example and created a new function that would print "O Canada" instead of "Go Blue". I had to define a function and then call it below where the Go Blue example is called.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -130,11 +142,11 @@ function handleClick(){
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
 
-
+A function is defined, `handleClick`, that, when called, will produce an alert that says 'hello'. Then, the way the button is defined, when it is clicked (`onclick`), it will execute that function and thus display the alert.
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
 
-
+Done on lines 40-42 (function definition) and 67 (button)
 
 ### The next few questions address the `jquerylib_submit_example.html` file.
 
