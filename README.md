@@ -1,21 +1,5 @@
 # SI 507 JavaScript assignment
 
-**To complete and submit this assignment, you should:**
-
-- [x] Fork (and clone) this repository
-
-- [x] Add our instructional team as a collaborator to your fork (see instructions for adding collaborators on Canvas)
-
-- [ ] Edit this `README.md` file with answers to the questions/prompts, briefly, using Markdown formatting so that the questions appear in bulletpoints and the answers appear clearly below each respective question, *not* as bulletpoints.
-
-- [ ] Add all names of those who worked on this (as indicated below)
-
-- [ ] Make the changes that are indicated below to each of the `.html` files with JavaScript programs provided. (You'll probably do this concurrently with answering questions)
-
-- [ ] Commit (as you go) and push your changes to all three files to your GitHub forked repository.
-
-- [ ] Submit a link to your repository on Canvas. (This HW doesn't have an autograder -- it will be graded by hand/by humans this time.)
-
 ### Who worked on this assignment?
 * **Maggie Davidson (jmaggie)**
 * Avery Gleason (averyag) - first couple questions only
@@ -90,17 +74,42 @@ A function is defined, `handleClick`, that, when called, will produce an alert t
 
 Done on lines 40-42 (function definition) and 67 (button)
 
-### The next few questions address the `jquerylib_submit_example.html` file.
+### `jquerylib_submit_example.html`
 
 * **Check out the file `jquerylib_submit_example.html`. This is an example of code that uses a package called `jQuery` (and this will need you to have an internet connection to run it properly, although the other file does not). Check out resources above for more on jQuery!**
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
 
+On lines 8-9, the color defined for an error is red, while on lines 11-12, the color defined for good input is blue. Then, on line 21, this error style is called, and the good style is called on line 25.
+
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+
+It is giving valid characters for the input, so that it can be used on line 20 to check if it's a valid input. The only valid inputs are lowercase or uppercase letters (`[a-zA-Z]`).
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
 
+In Python, the syntax is:
+```python
+if True:
+	do this thing
+	if you want a different thing to happen to, just add new lines with all the things you want, still indented under the if statement  
+else:
+	do this other thing
+```
+whereas in JavaScript, the syntax is:
+```js
+if(True){
+	do this thing;
+	if you want a different thing to happen to, put it here and make sure to separate each thing with a semicolon like this;
+} else {
+	do this other thing;
+}
+	do this other thing
+```
+
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+
+The number of milliseconds to define the speed at which it fades out. That was my hypothesis and I confirmed on [W3Schools](https://www.w3schools.com/jquery/eff_fadeout.asp).
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
@@ -109,6 +118,9 @@ $(document).ready(function(){
     $("form").submit(function(event){
 ```
 
+I think the first line is saying when the page ('document') is loaded ('ready') execute the following code. The second line is defining what happens when the person clicks the "submit" button.
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
+
+Done on lines 24-25
