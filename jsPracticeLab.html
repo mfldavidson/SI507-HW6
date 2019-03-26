@@ -14,7 +14,7 @@
 	console.log("hello in console");
 
 	function displayInformation () {
-		document.querySelector('h1').innerHTML = "A name";
+		document.querySelector('h1').innerHTML = "Maggie";
 		document.querySelector("#URL").innerHTML = document.documentURI; // URI means something like URL -- slight differences for specificity
 		document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length
 		document.querySelector('#time').innerHTML = new Date();
@@ -29,13 +29,22 @@
 		document.querySelector('#cheer').innerHTML += "Go blue!<br>"
 	}
 
+	function copyFunction2(){
+		document.querySelector('#cheer').innerHTML += "O Canada<br>"
+	}
+
 	function handleClick(){
 		alert("hello");
 	}
+
+	function handleClick2(){
+		alert("March 20, 2019");
+	}
+
 </script>
 <style>
 p{
-	background-color: #b3b3b3;
+	background-color: #798cb7;
 	border: 3px solid #FFFFFF;
 	padding: 3%;
 	font-size: 1.1em;
@@ -55,6 +64,7 @@ p{
 	</ol>
 	<h2>Using JavaScript to display information on this dynamic page:</h2>
 	<p>
+		Click this button to display when the Spring Equinox is this year! <button onclick=handleClick2() id="spring-button">Spring Equinox 2019</button><br/>
 		The URL of this page is: <span id = "URL"></span><br/>
 		The number of list items for this page: <span id = "items"></span><br/>
 		The current date/time is: <span id = "time"></span><br/>
@@ -66,6 +76,7 @@ p{
 		<li>McGill University</li>
 		<li>California State University Long Beach</li>
 		<li oncopy="copyFunction()">University of Michigan</li>
+		<li oncopy="copyFunction2()">McGill University</li>
 	</ul>
 	<div id="cheer">
 
